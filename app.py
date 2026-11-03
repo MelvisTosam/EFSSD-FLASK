@@ -20,6 +20,13 @@ def index():
     studentName = "Melvis"
     return render_template("index.html", title="Home", username=studentName)
 
+# About Page
+@app.route('/about')
+def about():
+    # Render HTML with the name in a H1 tag
+    studentName = "Melvis"
+    return render_template("about.html", title="About EFSSD")
+
 # Run application
 #==================
 # This code executes when the script is run directly
@@ -29,8 +36,4 @@ if __name__ == "__main__":
     # The app will run on port 81, accessible from any local IP address
     app.run(host='0.0.0.0', port=81, debug=True)
 
-# About Page
-@app.route('/about <name>')
-def aboutName(name):
-    # Render HTML with the name in a H1 tag
-    return render_template("index.html",greeting="Welcome", username=studentName)
+
